@@ -1,0 +1,122 @@
+// Light theme
+$background: #EFEFEF;
+$background-primary: #FFFFFF;
+$text-color: #333333;
+$text-color-contrast: #FFFFFF;
+$blue-dark: #03045e;
+$blue-primary: #0077b6;
+$blue-accent: #00b4d8;
+$blue-light: #90e0ef;
+$blue-pastel: #caf0f8;
+$border-light: #E0E0E0;
+$shadow-light: rgba(0, 0, 0, 0.1);
+
+// Button Colors - Light Theme
+$button-primary: #0077b6;
+$button-primary-hover: #005f8a;
+$button-secondary: #6c757d;
+$button-secondary-hover: #5a6268;
+$button-danger: #dc3545;
+$button-danger-hover: #c82333;
+
+// Sidebar Colors - Light Theme
+$sidebar-background-light: $background-primary;
+$sidebar-text-color-light: $text-color;
+$sidebar-item-hover-light: #f5f5f5;
+$sidebar-active-item-light: #0000ff;
+$sidebar-active-item-hover-light: #002fffde;
+
+// Dark Theme Colors
+$background-dark: #121212;
+$background-primary-dark: #1e1e1e;
+$text-color-dark: #e0e0e0;
+$text-color-contrast-dark: #000000;
+$blue-dark-dark: #001c3d;
+$blue-primary-dark: #005f8a;
+$blue-accent-dark: #007ea6;
+$blue-light-dark: #3f91a2;
+$blue-pastel-dark: #8fbfcf;
+$border-dark: #2a2a2a;
+$shadow-dark: rgba(0, 0, 0, 0.3);
+
+// Button Colors - Dark Theme
+$button-primary-dark: #0091dd;
+$button-primary-hover-dark: #00a8ff;
+$button-secondary-dark: #757575;
+$button-secondary-hover-dark: #8a8a8a;
+$button-danger-dark: #f55;
+$button-danger-hover-dark: #ff6b6b;
+
+// Sidebar Colors - Dark Theme
+$sidebar-background-dark: $background-primary-dark;
+$sidebar-text-color-dark: $text-color-dark;
+$sidebar-item-hover-dark: #494b4f;
+$sidebar-active-item-dark: #3A3B3B;
+$sidebar-active-item-hover-dark: #2e3033;
+
+// Theme Classes
+.light-theme {
+  --background-color: #{$background};
+  --background-primary-color: #{$background-primary};
+  --text-color: #{$text-color};
+  --text-color-contrast: #{$text-color-contrast};
+  --blue-dark: #{$blue-dark};
+  --blue-primary: #{$blue-primary};
+  --blue-accent: #{$blue-accent};
+  --blue-light: #{$blue-light};
+  --blue-pastel: #{$blue-pastel};
+  --border-color: #{$border-light};
+  --shadow-color: #{$shadow-light};
+  --shadow-sm: 0 1px 2px #{$shadow-light};
+  --shadow-md: 0 2px 4px #{$shadow-light};
+  --shadow-lg: 0 4px 8px #{$shadow-light};
+  --border-default: 1px solid #{$border-light};
+  
+  // Button Variables
+  --button-primary: #{$button-primary};
+  --button-primary-hover: #{$button-primary-hover};
+  --button-secondary: #{$button-secondary};
+  --button-secondary-hover: #{$button-secondary-hover};
+  --button-danger: #{$button-danger};
+  --button-danger-hover: #{$button-danger-hover};
+
+  // Sidebar Variables
+  --sidebar-background: #{$sidebar-background-light};
+  --sidebar-text-color: #{$sidebar-text-color-light};
+  --sidebar-item-hover: #{$sidebar-item-hover-light};
+  --sidebar-active-item: #{$sidebar-active-item-light};
+  --sidebar-active-item-hover: #{$sidebar-active-item-hover-light};
+}
+
+.dark-theme {
+  --background-color: #{$background-dark};
+  --background-primary-color: #{$background-primary-dark};
+  --text-color: #{$text-color-dark};
+  --text-color-contrast: #{$text-color-contrast-dark};
+  --blue-dark: #{$blue-dark-dark};
+  --blue-primary: #{$blue-primary-dark};
+  --blue-accent: #{$blue-accent-dark};
+  --blue-light: #{$blue-light-dark};
+  --blue-pastel: #{$blue-pastel-dark};
+  --border-color: #{$border-dark};
+  --shadow-color: #{$shadow-dark};
+  --shadow-sm: 0 1px 2px #{$shadow-dark};
+  --shadow-md: 0 2px 4px #{$shadow-dark};
+  --shadow-lg: 0 4px 8px #{$shadow-dark};
+  --border-default: 1px solid #{$border-dark};
+  
+  // Button Variables
+  --button-primary: #{$button-primary-dark};
+  --button-primary-hover: #{$button-primary-hover-dark};
+  --button-secondary: #{$button-secondary-dark};
+  --button-secondary-hover: #{$button-secondary-hover-dark};
+  --button-danger: #{$button-danger-dark};
+  --button-danger-hover: #{$button-danger-hover-dark};
+
+  // Sidebar Variables
+  --sidebar-background: #{$sidebar-background-dark};
+  --sidebar-text-color: #{$sidebar-text-color-dark};
+  --sidebar-item-hover: #{$sidebar-item-hover-dark};
+  --sidebar-active-item: #{$sidebar-active-item-dark};
+  --sidebar-active-item-hover: #{$sidebar-active-item-hover-dark};
+}

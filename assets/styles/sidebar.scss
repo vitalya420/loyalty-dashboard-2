@@ -1,0 +1,141 @@
+@use 'colors';
+
+$sidebar-collapsed-width: 60px;
+$sidebar-expanded-width: 205px;
+$ease: all 0.3s ease;
+
+.sidebar {
+  width: $sidebar-collapsed-width;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--border-color);
+  background-color: var(--sidebar-background);
+  color: var(--sidebar-text-color);
+  height: 100%;
+  transition: $ease;
+
+  .sidebar-head {
+    min-height: 80px;
+    position: relative;
+    padding: 10px 5px;
+
+    .sidebar-logo {
+      background: url("https://placehold.co/300x100") center/cover no-repeat;
+      height: 100%;
+      opacity: 0;
+      transition: $ease;
+    }
+
+    .sidebar-switch-btn{
+      position: absolute;
+      right: 15px;
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      top: calc(50% - 15px);
+      border: none;
+      cursor: pointer;
+      background-color: var(--background-primary-color);
+      color: var(--text-color);
+      transition: $ease;
+    }
+  }
+
+  &.sidebar-expanded {
+    width: $sidebar-expanded-width;
+
+    .sidebar-logo {
+      opacity: 1;
+    }
+    
+
+    .sidebar-switch-btn {
+      right: -15px;
+      box-shadow: 1px 1px 14px -2px rgba(0,0,0,0.3);
+      -webkit-box-shadow: 1px 1px 14px -2px rgba(0,0,0,0.3);
+      -moz-box-shadow: 1px 1px 14px -2px rgba(0,0,0,0.3);
+    }
+
+    .sidebar-body {
+      .sidebar-item {
+        .sidebar-item-text {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .sidebar-body {
+    flex-grow: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    
+    .sidebar-item {
+      display: flex;
+      align-items: center;
+      height: calc($sidebar-collapsed-width - 20px); /* Adjusted for margin */
+      border-radius: 8px;
+      margin: 5px;
+      padding: 5px 0;
+      cursor: pointer;
+  
+      .sidebar-item-icon {
+        min-width: calc($sidebar-collapsed-width - 10px); /* Adjusted for padding */
+        height: auto;
+        aspect-ratio: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+  
+      .sidebar-item-text {
+        opacity: 0;
+        text-decoration: none;
+        color: var(--sidebar-text-color);
+        text-wrap: nowrap;
+      }
+  
+      &:hover{
+        background-color: var(--sidebar-item-hover);
+      }
+  
+      &.active {
+        color: white;
+        background-color: var(--sidebar-active-item);
+    
+        &:hover {
+          background-color: var(--sidebar-active-item-hover);
+        }
+  
+        .sidebar-item-text {
+          color: white;
+        }
+      }
+    }
+  
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    z-index: 5;
+  }
+
+  .sidebar:not(.sidebar-expanded) {
+    transform: translateX(-100%);
+  }
+
+  .backdrop {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.2);
+    width: 100vw;
+    height: 100dvh;
+    z-index: 4;
+  }
+
+  .sidebar:not(.sidebar-expanded) .sidebar-switch-btn{
+    top: 10px;
+    right: -40px;
+  }
+}

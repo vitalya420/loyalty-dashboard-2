@@ -1,0 +1,68 @@
+@use 'mixins';
+
+
+@property --gradient-color-1 {
+  syntax: '<color>';
+  initial-value: #FFDEE9;
+  inherits: false;
+}
+
+@property --gradient-color-2 {
+  syntax: '<color>';
+  initial-value: #B5FFFC;
+  inherits: false;
+}
+
+
+
+.dark-theme .login-page-background {
+  --gradient-color-1: #29323c;
+  --gradient-color-2: #485563;
+}
+
+
+.login-page-background{
+  width: 100dvw;
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: --gradient-color-1 0.3s, --gradient-color-2 0.3s;
+  background: linear-gradient(0deg, var(--gradient-color-1) 0%, var(--gradient-color-2) 100%);
+
+
+  .login-form-wrapper {
+    $margin: 20px;
+
+    background: var(--background-primary-color);
+    color: var(--text-color);
+
+    @include mixins.rounded;
+    margin: 0px 20px;
+    width: min(450px, calc(100% - $margin * 2));
+    @include mixins.elevated;
+    transition: all 0.3s ease;
+
+    .login-form-header {
+      width: 100%;
+      @include mixins.border-bottom;
+      padding: 5px 5px;
+    }
+
+    .login-form-body {
+      padding: 20px 20px;
+      
+      .actions {
+        .theme-switcher-wrapper {
+          display: flex;
+          align-items: end;
+          gap: 5px;
+        }
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+  }
+}

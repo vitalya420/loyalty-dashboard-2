@@ -1,0 +1,20 @@
+
+$border-radius: 0.5rem;
+
+@mixin rounded {
+  border-radius: $border-radius;
+}
+
+@mixin elevated {
+  box-shadow: var(--shadow-color) 0px 8px 24px;
+  transition: box-shadow 0.3s ease;
+}
+
+@mixin border-bottom {
+  border-bottom: 1px solid var(--border-color);
+}
+
+@mixin color-transition {
+  transition: background-color 0.3s ease;
+  transition: color 0.3s ease;
+}
