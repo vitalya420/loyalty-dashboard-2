@@ -6,6 +6,8 @@ export default defineNuxtConfig({
   modules: [ '@pinia/nuxt' ],
   css: [
     '@/assets/styles/main.scss',
+    '@/assets/styles/card.scss',
+    '@/assets/styles/grid.scss',
     '@/assets/styles/_form.scss',
     '@/assets/styles/_utils.scss',
     '@/assets/styles/_buttons.scss',
