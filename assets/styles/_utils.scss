@@ -4,6 +4,15 @@
   text-align: center;
 }
 
+.padding-y-5px{
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
 @media (max-width: 768px) {
   .hideable {
     display: none;
