@@ -1,14 +1,14 @@
 <template>
   <Card title="Establishments" subtitle="View, create or update or establishments!">
     <div class="establishment-page">
-      <button class="button success" v-if="establishments.length">
+      <button class="button primary" v-if="establishments.length">
         <i class="bi bi-building-add"></i>
         <span>Create new establishment</span>
       </button>
       <div class="establishments-grid">
         <div v-if="establishments.length === 0" class="empty">
           <div>Create your first establishment!</div>
-          <button class="button success" @click="this.$router.push({path: '/dashboard/establishments/create'})">
+          <button class="button primary" @click="this.$router.push({path: '/dashboard/establishments/create'})">
             <i class="bi bi-building-add"></i>
             <span>Create new establishment</span>
           </button>

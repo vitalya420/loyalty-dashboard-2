@@ -17,7 +17,7 @@
       <textarea placeholder="Write about your business" rows="5" class="text-input" id="desc"></textarea>
     </div>
     <div>
-      <button class="button success">Save</button>
+      <button class="button primary">Save</button>
     </div>
   </div>
 </template>
